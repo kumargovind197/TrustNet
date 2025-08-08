@@ -1,0 +1,274 @@
+.home-container {
+  font-family: Arial, sans-serif;
+  background: #002244; /* Dark Blue Background */
+  min-height: 100vh;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+/* Navbar */
+.navbar {
+  background: #004AAD; /* Royal Blue */
+  color: white;
+  padding: 12px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0 0 12px 12px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-logo {
+  width: 28px;
+  height: 28px;
+}
+
+.nav-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.nav-menu {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Welcome */
+.welcome-text {
+  margin-top: 15px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+
+/* Stats */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin-top: 15px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.stat-card {
+  color: white;
+  border-radius: 10px;
+  padding: 20px 10px;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.promises {
+  background: #00B37E; /* Teal Green */
+}
+
+.trust-score {
+  background: #FF9B00; /* Orange */
+}
+
+.stat-card h3 {
+  font-size: clamp(1.6rem, 2vw, 2rem);
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.stat-card p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Quick Actions */
+.quick-action-title {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.quick-card {
+  color: white;
+  border-radius: 10px;
+  padding: 20px 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  font-weight: bold;
+}
+
+.quick-card:hover {
+  transform: scale(1.05);
+}
+
+.add-promise {
+  background: #E6007A; /* Pink */
+}
+
+.view-score {
+  background: #00AAA6; /* Teal */
+}
+
+.icon {
+  font-size: 1.6rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Activity Button */
+.activity-btn {
+  margin-top: 15px;
+  background: #7B4FFF; /* Purple */
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-weight: bold;
+}
+
+.activity-btn:hover {
+  background: #5F34D0;
+}
+.recent-section {
+  background: #00796B; /* Dark Teal/Greenish */
+  color: white;
+  padding: 12px 0;
+  border-radius: 15px;
+  margin-top: 15px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.recent-section:hover {
+  transform: scale(1.02);
+}
+
+
+/* Animation */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .nav-title {
+    font-size: 1rem;
+  }
+
+  .welcome-text {
+    font-size: 1.2rem;
+  }
+
+  .quick-card,
+  .stat-card {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-title {
+    font-size: 0.95rem;
+  }
+
+  .icon {
+    font-size: 1.4rem;
+  }
+
+  .quick-card,
+  .stat-card {
+    padding: 12px;
+  }
+}
+/* Sidebar Navigation */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0; /* align to right */
+  transform: translateX(100%); /* initially hidden to the right */
+  width: 240px;
+  height: 100%;
+  background-color: #166534;
+  color: white;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar.open {
+  transform: translateX(0); /* slide in */
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin-top: 50px;
+}
+
+.sidebar-menu li {
+  padding: 15px 0;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background 0.2s;
+}
+
+.sidebar-menu li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+}

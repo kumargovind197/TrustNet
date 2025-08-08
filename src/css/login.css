@@ -1,0 +1,193 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f7f7f7;
+}
+
+.login-card {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.trust-logo {
+  width: 50px;
+  margin-bottom: 5px;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: gray;
+  margin-bottom: 15px;
+}
+
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #166534;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  gap: 10px;
+  width: 100%;
+  transition: transform 0.2s;
+}
+
+.google-btn img {
+  width: 20px;
+}
+
+.google-btn:hover {
+  transform: scale(1.03);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  color: gray;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+}
+
+.divider span {
+  margin: 0 10px;
+}
+
+.input-label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  font-size: 0.85rem;
+}
+
+.input-field {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.otp-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.send-otp-btn {
+  background: #166534;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.otp-inputs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.otp-box {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1.2rem;
+}
+
+.verify-btn {
+  background: #166534;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.verify-btn:hover {
+  background: #14532d;
+}
+
+.privacy-link {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: gray;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 400px) {
+  .login-card {
+    padding: 15px;
+    border-radius: 15px;
+  }
+  .otp-box {
+    width: 35px;
+    height: 35px;
+  }
+}
+.top-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.trust-logo {
+  width: 45px;
+  height: 45px;
+}
+
+.title-section {
+  text-align: left;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  color: gray;
+  margin: 0;
+}

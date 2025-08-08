@@ -1,0 +1,83 @@
+import React, { useState } from "react";
+import "../css/login.css"
+import googleLogo from "./Google_Icons-09-512.webp"; // Add Google logo image
+import trustLogo from "./download (2).png"; // Add TrustNet logo image
+import { useNavigate } from "react-router-dom";
+
+export default function LoginPage() {
+  const [mobile, setMobile] = useState("");
+  const [otp, setOtp] = useState(["", "", "", "", "", ""]);
+ const navigate=useNavigate()
+  const handleOtpChange = (value, index) => {
+    if (/^[0-9]?$/.test(value)) {
+      const newOtp = [...otp];
+      newOtp[index] = value;
+      setOtp(newOtp);
+
+      if (value && index < otp.length - 1) {
+        document.getElementById(`otp-${index + 1}`).focus();
+      }
+    }
+  };
+const handleVerify = () => {
+  navigate("/homepage"); // <-- Route path defined in App.js
+};
+
+  return (
+    <div className="login-container">
+      <div className="login-card">
+       <div className="top-section">
+  <img src={trustLogo} alt="TrustNet" className="trust-logo" />
+  <div className="title-section">
+    <h2 className="title">TrustNet</h2>
+    <p className="subtitle">Built on Trust</p>
+  </div>
+</div>
+
+        <button className="google-btn">
+          <img src={googleLogo} alt="Google" />
+          Sign in with Google
+        </button>
+
+        <div className="divider">
+          <span>or</span>
+        </div>
+
+        <label className="input-label">Mobile number</label>
+       <input
+  type="tel"
+  placeholder="+91"
+  className="input-field"
+  value={mobile}
+  onChange={(e) => {
+    const onlyNums = e.target.value.replace(/[^0-9+]/g, ""); // allows only numbers and +
+    setMobile(onlyNums);
+  }}
+/>
+
+        <div className="otp-row">
+          <span className="otp-label">Send OTP</span>
+          <button className="send-otp-btn">Send OTP</button>
+        </div>
+
+        <div className="otp-inputs">
+          {otp.map((digit, index) => (
+            <input
+              key={index}
+              id={`otp-${index}`}
+              type="text"
+              maxLength="1"
+              value={digit}
+              onChange={(e) => handleOtpChange(e.target.value, index)}
+              className="otp-box"
+            />
+          ))}
+        </div>
+
+        <button className="verify-btn" onClick={handleVerify}>Verify</button>
+
+        <p className="privacy-link">Privacy policy</p>
+      </div>
+    </div>
+  );
+}
