@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../css/homepage.css";
 import trustLogo from "../login/reliability.webp";
+import { FaHome, FaSignInAlt, FaPhoneAlt } from "react-icons/fa";
 
 export default function HomePage() {
   const userName = "Tanveersyed";
@@ -14,9 +15,9 @@ export default function HomePage() {
       <div className={`sidebar ${isSidebarOpen ? "open" : ""}`}>
         <button className="close-btn" onClick={toggleSidebar}>×</button>
         <ul className="sidebar-menu">
-          <li>🏠 Home</li>
-          <li>🔐 Login</li>
-          <li>📞 Contact</li>
+         <li><FaHome className="sidebar-icon" /> Home</li>
+          <li><FaSignInAlt className="sidebar-icon" /> Login</li>
+          <li><FaPhoneAlt className="sidebar-icon" /> Contact</li>
         </ul>
       </div>
 
