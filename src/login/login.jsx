@@ -28,6 +28,9 @@ const handleVerify = () => {
 const handleGoogleLogin = async () => {
   try {
     const result = await signInWithPopup(auth, provider);
+ const user = result.user;
+
+localStorage.setItem("userName", user.displayName);  // ✅ MUST SET THIS
 
     Swal.fire({
       title: `Welcome, ${result.user.displayName || "User"}!`,
