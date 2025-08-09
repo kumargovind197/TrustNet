@@ -191,3 +191,9 @@ body {
   color: gray;
   margin: 0;
 }
+.icon {
+  font-size: 1.2rem;
+  display: inline-block;
+  margin-right: 6px;
+  vertical-align: middle;
+}

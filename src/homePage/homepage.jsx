@@ -52,17 +52,21 @@ export default function HomePage() {
       <h3 className="quick-action-title">Quick Action</h3>
       <div className="quick-grid">
         <div className="quick-card add-promise">
-          <span className="icon">＋</span>
+         <span className="icon"><FaPlus /></span>
+
           <p>Add Promise</p>
         </div>
         <div className="quick-card view-score">
-          <span className="icon">👁</span>
+        <span className="icon"><FaEye /></span>
+
           <p>View Score</p>
         </div>
       </div>
 
       {/* Activity History */}
-      <button className="activity-btn">⏱ Activity History</button>
+      <button className="activity-btn">
+        <span className="icon"><FaHistory /></span>
+Activity History</button>
 
       {/* Recent Activity */}
       <div className="recent-section">
