@@ -3,6 +3,10 @@ import "../css/login.css"
 import googleLogo from "./Google_Icons-09-512.webp"; // Add Google logo image
 import trustLogo from "./download (2).png"; // Add TrustNet logo image
 import { useNavigate } from "react-router-dom";
+import { auth , provider, signInWithPopup } from "../firebase/firebase.config";
+import Swal from 'sweetalert2';
+import 'animate.css';
+
 export default function LoginPage() {
   const [mobile, setMobile] = useState("");
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
@@ -19,9 +23,40 @@ export default function LoginPage() {
     }
   };
 const handleVerify = () => {
-  navigate("/homepage"); // <-- Route path defined in App.js
+//   navigate("/homepage"); // <-- Route path defined in App.js
 };
+const handleGoogleLogin = async () => {
+   try {
+    const result = await signInWithPopup(auth, provider);
+    console.log("User Info:", result.user);
 
+    Swal.fire({
+      title: `Welcome, ${result.user.displayName || "User"}!`,
+      text: "You have successfully logged in with Google.",
+      icon: "success",
+      confirmButtonText: "Continue",
+      timer: 3000,
+      timerProgressBar: true,
+      showClass: {
+        popup: 'animate__animated animate__fadeInDown'
+      },
+      hideClass: {
+        popup: 'animate__animated animate__fadeOutUp'
+      }
+    }).then(() => {
+      navigate("/homepage");
+    });
+
+  } catch (error) {
+    console.error("Google Sign-in Error:", error);
+    Swal.fire({
+      title: "Error!",
+      text: "Google Sign-in failed. Try again.",
+      icon: "error",
+      confirmButtonText: "Okay"
+    });
+  }
+};
   return (
     <div className="login-container">
       <div className="login-card">
@@ -33,7 +68,7 @@ const handleVerify = () => {
   </div>
 </div>
 
-        <button className="google-btn">
+        <button className="google-btn" onClick={handleGoogleLogin}>
           <img src={googleLogo} alt="Google" />
           Sign in with Google
         </button>
