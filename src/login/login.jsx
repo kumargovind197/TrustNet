@@ -26,16 +26,15 @@ const handleVerify = () => {
 //   navigate("/homepage"); // <-- Route path defined in App.js
 };
 const handleGoogleLogin = async () => {
-   try {
+  try {
     const result = await signInWithPopup(auth, provider);
-    console.log("User Info:", result.user);
 
     Swal.fire({
       title: `Welcome, ${result.user.displayName || "User"}!`,
-      text: "You have successfully logged in with Google.",
+      text: "You've successfully signed in with Google",
       icon: "success",
       confirmButtonText: "Continue",
-      timer: 3000,
+      timer: 2500,
       timerProgressBar: true,
       showClass: {
         popup: 'animate__animated animate__fadeInDown'
@@ -46,14 +45,14 @@ const handleGoogleLogin = async () => {
     }).then(() => {
       navigate("/homepage");
     });
-
   } catch (error) {
     console.error("Google Sign-in Error:", error);
+
     Swal.fire({
-      title: "Error!",
-      text: "Google Sign-in failed. Try again.",
+      title: "Oops...",
+      text: "Google Sign-in failed. Please try again.",
       icon: "error",
-      confirmButtonText: "Okay"
+      confirmButtonText: "Retry"
     });
   }
 };
