@@ -3,7 +3,6 @@ import "../css/login.css"
 import googleLogo from "./Google_Icons-09-512.webp"; // Add Google logo image
 import trustLogo from "./download (2).png"; // Add TrustNet logo image
 import { useNavigate } from "react-router-dom";
-import { FaPlus, FaEye, FaHistory } from "react-icons/fa";
 export default function LoginPage() {
   const [mobile, setMobile] = useState("");
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
@@ -75,7 +74,7 @@ const handleVerify = () => {
         </div>
 
         <button className="verify-btn" onClick={handleVerify}>
-             <FaHistory style={{ marginRight: "8px" }} /> Verify</button>
+           Verify</button>
 
         <p className="privacy-link">Privacy policy</p>
       </div>

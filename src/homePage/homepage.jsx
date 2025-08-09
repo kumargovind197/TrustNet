@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../css/homepage.css";
 import trustLogo from "../login/reliability.webp";
 import { FaHome, FaSignInAlt, FaPhoneAlt } from "react-icons/fa";
+import { FaPlus, FaEye, FaHistory } from "react-icons/fa";
 
 export default function HomePage() {
   const userName = "Tanveersyed";
