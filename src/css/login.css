@@ -163,54 +163,11 @@ body {
     height: 35px;
   }
 }
-.top-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 15px;
-}
-
-.trust-logo {
-  width: 45px;
-  height: 45px;
-}
-
-.title-section {
-  text-align: left;
-}
-
-.title {
-  font-size: 1.4rem;
-  font-weight: bold;
-  margin: 0;
-}
-
-.subtitle {
-  font-size: 0.85rem;
-  color: gray;
-  margin: 0;
-}
 .icon {
   font-size: 1.2rem;
   display: inline-block;
   margin-right: 6px;
   vertical-align: middle;
-}
-.copilot-credit {
-  font-size: 0.85rem;
-  color: #888;
-  margin-top: 4px;
-  text-align: center;
-  /* font-style: italic; */
-}
-
-.footer-links {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-around;
-  font-size: 0.85rem;
-  color: #555;
 }
 
 .footer-links a {
@@ -221,4 +178,39 @@ body {
 
 .footer-links a:hover {
   text-decoration: underline;
+}.branding-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
 }
+
+.trust-logo {
+  width: 51px;
+  height: 55px;
+}
+
+.branding-text {
+  text-align: center;
+  line-height: 1.2;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.subtitle,
+.copilot-text {
+  font-size: 0.85rem;
+  color: gray;
+  margin: 0;
+}
+
+.copilot-logo {
+  width: 30px; /* slightly bigger than before */
+  height: 26px;
+}
+

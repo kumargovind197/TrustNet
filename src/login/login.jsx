@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { auth , provider, signInWithPopup } from "../firebase/firebase.config";
 import Swal from 'sweetalert2';
 import 'animate.css';
-
+import copilotLogo from "./copilit.png"
 export default function LoginPage() {
   const [mobile, setMobile] = useState("");
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
@@ -62,14 +62,19 @@ localStorage.setItem("userName", user.displayName);  // ✅ MUST SET THIS
   return (
     <div className="login-container">
       <div className="login-card">
-       <div className="top-section">
+  <div className="branding-row">
   <img src={trustLogo} alt="TrustNet" className="trust-logo" />
-  <div className="title-section">
+
+  <div className="branding-text">
     <h2 className="title">TrustNet</h2>
     <p className="subtitle">Built on Trust</p>
-     <p className="copilot-credit">Made with  Copilot</p>
+    <p className="copilot-text">Made with Copilot</p>
   </div>
+
+  <img src={copilotLogo} alt="Copilot" className="copilot-logo" />
 </div>
+
+
 
         <button className="google-btn" onClick={handleGoogleLogin}>
           <img src={googleLogo} alt="Google" />
