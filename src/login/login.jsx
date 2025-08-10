@@ -67,6 +67,7 @@ localStorage.setItem("userName", user.displayName);  // ✅ MUST SET THIS
   <div className="title-section">
     <h2 className="title">TrustNet</h2>
     <p className="subtitle">Built on Trust</p>
+     <p className="copilot-credit">Made with  Copilot</p>
   </div>
 </div>
 
@@ -112,8 +113,11 @@ localStorage.setItem("userName", user.displayName);  // ✅ MUST SET THIS
 
         <button className="verify-btn" onClick={handleVerify}>
            Verify</button>
-
-        <p className="privacy-link">Privacy policy</p>
+         <div className="footer-links">
+          <a href="./privacy">Privacy Policy</a>
+          <a href="./terms">Terms & Conditions</a>
+          <a href="./contactus">Contact Us</a>
+        </div>
       </div>
     </div>
   );
