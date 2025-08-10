@@ -13,7 +13,7 @@ export default function HomePage() {
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 useEffect(() => {
   const storedName = localStorage.getItem("userName");
-  console.log("Stored Name:", storedName); // 👀 Debug this
+  console.log("Stored Name:", storedName); 
   if (storedName) {
     setUserName(storedName);
   }
@@ -21,7 +21,6 @@ useEffect(() => {
 
   return (
     <div className="home-container">
-      {/* Sidebar */}
       <div className={`sidebar ${isSidebarOpen ? "open" : ""}`}>
         <button className="close-btn" onClick={toggleSidebar}>×</button>
         <ul className="sidebar-menu">
@@ -31,10 +30,7 @@ useEffect(() => {
         </ul>
       </div>
 
-      {/* Overlay */}
       {isSidebarOpen && <div className="overlay" onClick={toggleSidebar}></div>}
-
-      {/* Top Navbar */}
       <header className="navbar">
         <div className="nav-left">
           <img src={trustLogo} alt="TrustNet" className="nav-logo" />
@@ -42,11 +38,7 @@ useEffect(() => {
         </div>
         <div className="nav-menu" onClick={toggleSidebar}>☰</div>
       </header>
-
-      {/* Welcome Message */}
       <h2 className="welcome-text">Welcome, <br />{userName}</h2>
-
-      {/* Stats Section */}
       <div className="stats-grid">
         <div className="stat-card promises">
           <h3>15</h3>
@@ -57,8 +49,6 @@ useEffect(() => {
           <p>Trust Score</p>
         </div>
       </div>
-
-      {/* Quick Actions */}
       <h3 className="quick-action-title">Quick Action</h3>
       <div className="quick-grid">
         <div className="quick-card add-promise">
@@ -72,13 +62,9 @@ useEffect(() => {
           <p>View Score</p>
         </div>
       </div>
-
-      {/* Activity History */}
       <button className="activity-btn">
         <span className="icon"><FaHistory /></span>
-Activity History</button>
-
-      {/* Recent Activity */}
+              Activity History</button>
       <div className="recent-section">
         <h3>Recent Activity</h3>
       </div>

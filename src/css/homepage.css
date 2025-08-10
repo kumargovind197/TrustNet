@@ -1,6 +1,6 @@
 .home-container {
   font-family: Arial, sans-serif;
-  background: #002244; /* Dark Blue Background */
+  background: #002244; 
   min-height: 100vh;
   padding: 0 15px;
   display: flex;
@@ -11,7 +11,7 @@
 
 /* Navbar */
 .navbar {
-  background: #004AAD; /* Royal Blue */
+  background: #0148a4; 
   color: white;
   padding: 12px 15px;
   display: flex;
@@ -124,11 +124,11 @@
 }
 
 .add-promise {
-  background: #E6007A; /* Pink */
+  background: #E6007A; 
 }
 
 .view-score {
-  background: #00AAA6; /* Teal */
+  background: #00AAA6; 
 }
 
 .icon {
@@ -137,10 +137,9 @@
   margin-bottom: 5px;
 }
 
-/* Activity Button */
 .activity-btn {
   margin-top: 15px;
-  background: #7B4FFF; /* Purple */
+  background: #7B4FFF; 
   color: white;
   padding: 12px;
   border: none;
@@ -157,7 +156,7 @@
   background: #5F34D0;
 }
 .recent-section {
-  background: #00796B; /* Dark Teal/Greenish */
+  background: #00796B; 
   color: white;
   padding: 12px 0;
   border-radius: 15px;
@@ -176,13 +175,11 @@
 }
 
 
-/* Animation */
 @keyframes fadeIn {
   from {opacity: 0; transform: translateY(10px);}
   to {opacity: 1; transform: translateY(0);}
 }
 
-/* Responsive Tweaks */
 @media (max-width: 768px) {
   .navbar {
     padding: 10px;
@@ -220,8 +217,8 @@
 .sidebar {
   position: fixed;
   top: 0;
-  right: 0; /* align to right */
-  transform: translateX(100%); /* initially hidden to the right */
+  right: 0; 
+  transform: translateX(100%); 
   width: 240px;
   height: 100%;
   background-color: #166534;
@@ -234,7 +231,7 @@
 }
 
 .sidebar.open {
-  transform: translateX(0); /* slide in */
+  transform: translateX(0); 
 }
 
 .sidebar-menu {
@@ -264,7 +261,7 @@
   cursor: pointer;
 }
 
-/* Overlay */
+
 .overlay {
   position: fixed;
   top: 0;

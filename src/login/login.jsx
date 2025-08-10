@@ -92,7 +92,7 @@ localStorage.setItem("userName", user.displayName);  // ✅ MUST SET THIS
   className="input-field"
   value={mobile}
   onChange={(e) => {
-    const onlyNums = e.target.value.replace(/[^0-9+]/g, ""); // allows only numbers and +
+    const onlyNums = e.target.value.replace(/[^0-9+]/g, ""); 
     setMobile(onlyNums);
   }}
 />
